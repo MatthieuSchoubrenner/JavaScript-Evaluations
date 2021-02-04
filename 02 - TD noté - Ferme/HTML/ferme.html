@@ -8,7 +8,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
   <script src="../JS/ferme.js"></script>
-  <title></title>
+  <title>Exercice gestion ferme JS</title>
 
 </head>
 
@@ -46,9 +46,31 @@
   <br><br>
 
   <div id="tableau">
-    <table id="table"></table>
+    <table border="1px">
+      <thead>
+        <tr>
+          <td>Race</td>
+          <td>Nom</td>
+          <td>Couleur</td>
+          <td>Couleur oeuf</td>
+          <td>Nbr/jour</td>
+          <td>Nbr/semaine</td>
+          <td>Nbr/mois</td>
+          <td>Nbr/année</td>
+          <td>Total annuel</td>
+        </tr>
+      </thead>
+      <tbody></tbody>
+      <tfoot>
+        <tr>
+          <td colspan="7"></td>
+          <td>Total :</td>
+          <td id="tabTotal"></td>
+        </tr>
+      </tfoot>
+    </table>
     <br>
-    <span id="chiffreAffaireAnnuel" class="juste"></span>
+    <span id="chiffreAffaireAnnuel" class="valid"></span>
   </div>
 
 

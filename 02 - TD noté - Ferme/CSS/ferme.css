@@ -2,30 +2,28 @@ body {
   font-family: 'Roboto', sans-serif;
 }
 
-button:hover{
+button:hover {
   background-color: black;
   color: white;
 }
 
 
-.completerchamp {
+.erreur {
   color: red;
   font-weight: bold;
   display: none;
 }
 
-.add {
-  background: green;
-  padding: 10px;
-  border: none;
+.valid {
+  color: green;
+  font-size: 30px;
 }
+
+table {
+  text-align: center;
+}
+
 
 label {
   font-weight: bold;
-}
-
-.show {
-  background: orange;
-  padding: 10px;
-  border: none;
 }

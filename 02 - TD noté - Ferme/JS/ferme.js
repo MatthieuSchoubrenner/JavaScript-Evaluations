@@ -12,7 +12,6 @@ function rouge() {
   var nom = document.getElementById('nom').value;
   var couleur = document.getElementById('couleur').value;
   var nb = document.getElementById('nb').value;
-  
 
   // RACE
   if (race == '') {
@@ -50,20 +49,19 @@ function ajouter() {
   var race = document.getElementById('race').value;
   var nom = document.getElementById('nom').value;
   var couleur = document.getElementById('couleur').value;
-  var nb = document.getElementById('nbOeuf').value;
+  var nb = document.getElementById('nb').value;
   var chiffreAffaire;
 
 
   var getPoule = tabPoule.find(allias => allias.nom === document.getElementById('nom').value);
-  if (race != '' && nom != '' && couleur != '' && nb != '' && couleurPoule != '') {
+  if (race != '' && nom != '' && couleur != '' && nb != '') {
     if (getPoule) {
       document.getElementById('doublon').style.display = "inline-block";
     } else {
       document.getElementById('doublon').style.display = "none";
-      nbSemaine = Math.round(nbOeuf.value * 7);
+      nbSemaine = Math.round(nb.value * 7);
       nbMois = Math.round((nbSemaine * 4.33) - ((nbSemaine * 4.33) * 0.05));
       nbAnnee = Math.round(nbMois * 12);
-
 
       if (couleur = 'beige') {
         chiffreAffaire = Math.round(1 * nbAnnee);
@@ -84,7 +82,6 @@ function ajouter() {
         race: race,
         nom: nom,
         couleur: couleur,
-        couleurPoule: couleurPoule,
         nb: nbOeuf.value,
         nbSemaine: nbSemaine,
         nbMois: nbMois,
@@ -94,9 +91,6 @@ function ajouter() {
       chiffreAffaireAnnuel += chiffreAffaire;
     }
     console.log(tabPoule)
-
-
-
   }
 }
 
@@ -105,38 +99,8 @@ function afficher() {
   document.getElementById('poule').style.display = "none";
   document.getElementById('tableau').style.display = "block";
   document.getElementById('chiffreAffaireAnnuel').innerHTML = "Le chiffre d'affaire annuel est de " + chiffreAffaireAnnuel + " €";
-
-  var text = '<tr>';
-  text += '<td>Race</td>';
-  text += '<td>Nom</td>';
-  text += '<td>Couleur de poule</td>';
-  text += '<td>Couleur oeuf</td>';
-  text += '<td>oeuf par jour</td>';
-  text += '<td>oeuf par semaine</td>';
-  text += '<td>oeuf par mois</td>';
-  text += '<td>oeuf par annee</td>';
-  text += '<td>chiffre affaire annuel</td>';
-  text += '</tr>';
-
-  tabPoule.sort((a, b) => {
-    return a.nb - b.nb
-  });
-  tabPoule.reverse();
-
-  for (res of tabPoule) {
-    text += '<tr>';
-    text += '<td>' + res.race + '</td>';
-    text += '<td>' + res.nom + '</td>';
-    text += '<td>' + res.couleurPoule + '</td>';
-    text += '<td>' + res.couleur + '</td>';
-    text += '<td>' + res.nb + '</td>';
-    text += '<td>' + res.nbSemaine + '</td>';
-    text += '<td>' + res.nbMois + '</td>';
-    text += '<td>' + res.nbAnnee + '</td>';
-    text += '<td>' + res.chiffreAffaire + '</td>';
-    text += '</tr>';
-  }
   document.getElementById('table').innerHTML = text;
+
 }
 
 // <!-- ,~. -->
