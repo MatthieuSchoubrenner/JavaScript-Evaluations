@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Matthieu Schoubrenner">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../CSS/styleindex.CSS">
+  <title>01 - TD noté</title>
+</head>
+
+<body>
+  <header>
+    <h1>MA VOITURE.FR</h1>
+  </header>
+  <form method="post" id="formulaire" style="display: block;">
+    <div id="erreurMarque"></div>
+    <label for="marque">Marque</label>
+    <input type="text" name="marque" id="marque" maxlength="15" placeholder="Saisissez la marque du véhicule"
+      onblur="calcul()">
+    <!-- FIN DIV CHAMP MARQUE -->
+    <br><br>
+    <div id="erreurModele"></div>
+    <label for="modele">Modèle</label>
+    <input type="text" name="modele" id="modele" maxlength="15" placeholder="Saisissez le modèle du véhciule"
+      onblur="calcul()">
+    <!-- FIN DIV CHAMP MODELE -->
+    <br><br>
+    <div id="erreurType"></div>
+    <label for="type">Type</label>
+    <select name="type" id="type" onchange="calcul()">
+      <option value="carburants">Type de carburants</option>
+      <option value="essence">Essence</option>
+      <option value="diesel">Diesel</option>
+    </select>
+    <!-- FIN CHAMP TYPE -->
+    <br><br>
+    <div id="erreurOrigine"></div>
+    <label for="origine">Origine</label>
+    <select name="origine" id="origine" onchange="calcul()">
+      <option value="paysorigine">Pays d'origine</option>
+      <option value="france">France</option>
+      <option value="allemagne">Allemagne</option>
+      <option value="italie">Italie</option>
+    </select>
+    <!-- FIN CHAMP ORIGINE -->
+    <br><br>
+    <div id="erreurKm"></div>
+    <label for="km">Nombre de kilomètres</label>
+    <input type="number" name="km" id="km" placeholder="Saisissez le kilométrage du véhicule" onblur="calcul()">
+    <!-- FIN CHAMP KM -->
+    <br><br>
+    <div id="erreurValeur"></div>
+    <label for="valeur">Valeur du véhicule neuf</label>
+    <input type="number" name="valeur" id="valeur" placeholder="Saisissez la valeur du véhicule" onblur="calcul()">
+    <!-- FIN CHAMP VALEUR -->
+    <br><br>
+    <div id="erreurTravaux"></div>
+    <label for="travaux">Travaux à prévoir</label>
+    <select name="travaux" id="travaux" onchange="calcul()">
+      <option value="travauxprevisions">Travaux à prévoir</option>
+      <option value="oui">Oui</option>
+      <option value="non">Non</option>
+    </select>
+    <!-- FIN CHAMP TRAVAUX -->
+    <br><br>
+    <button type="button" id="btn" onclick="estimation(); calcul()" style="display: none">Estimer</button>
+  </form>
+  <p>
+    Marque : <span id="marque2"></span><br>
+    Modèle : <span id="modele2"></span><br>
+    Type : <span id="type2"></span><br>
+    Origine : <span id="origine2"></span><br>
+    Nombre de Km : <span id="km2"></span><br>
+    Travaux à prévoir : <span id="travaux2"></span><br>
+  </p>
+  <div id="result"></div>
+  <script src="../JS/ventevoiture.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,31 @@
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+button:hover{
+  background-color: black;
+  color: white;
+}
+
+
+.completerchamp {
+  color: red;
+  font-weight: bold;
+  display: none;
+}
+
+.add {
+  background: green;
+  padding: 10px;
+  border: none;
+}
+
+label {
+  font-weight: bold;
+}
+
+.show {
+  background: orange;
+  padding: 10px;
+  border: none;
+}

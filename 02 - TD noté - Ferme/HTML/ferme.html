@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../CSS/ferme.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+  <script src="../JS/ferme.js"></script>
+  <title></title>
+
+</head>
+
+<body>
+  <h1>Gestion œufs et poules</h1>
+  <div id="poule">
+    <label>Race :</label><span class="erreur" id="erreurRace">Veuillez indiquez la race de la poule</span>
+    <input type="text" name="race" id="race" onblur="rouge()">
+    <br><br>
+
+    <label>Nom :</label><span class="erreur" id="erreurNom">Veuillez saisir le nom de la poule</span>
+    <span class="erreur" id="doublon">existe déjà</span>
+    <input type="text" name="nom" id="nom" onblur="rouge()">
+    <br><br>
+
+    <label>Couleur oeuf :</label><span class="erreur" id="erreurCouleur">Veuillez indiquez la couleur de l'œuf</span>
+    <select name="couleur" id="couleur" onblur="rouge()">
+      <option value="">couleur</option>
+      <option value="beige">beige</option>
+      <option value="bleu">bleu</option>
+      <option value="vert">vert</option>
+      <option value="brun">brun</option>
+      <option value="blanc">blanc</option>
+    </select>
+    <br><br>
+
+    <label>Nombre d'oeuf par jour :</label><span class="erreur" id="erreurNBoeuf">Veuillez indiquez le nombre
+      d'œufs/jour</span>
+    <input type="text" name="nb" id="nb" onblur="rouge()">
+  </div>
+  <br>
+
+  <button type="button" onclick="ajouter()">AJOUTER</button>
+  <button type="button" onclick="afficher()">AFFICHER</button>
+  <br><br>
+
+  <div id="tableau">
+    <table id="table"></table>
+    <br>
+    <span id="chiffreAffaireAnnuel" class="juste"></span>
+  </div>
+
+
+</body>
+
+</html>
+
+<!-- ,~. -->
+<!-- ,-'__ `-, -->
+<!-- {,-'  `. }              ,')
+ ,( a )   `-.__         ,',')~,
+<=.) (         `-.__,==' ' ' '}
+  (   )                      /)
+   `-'\   ,                    )
+       |  \        `~.        /
+       \   `._        \      /
+        \     `._____,'    ,'
+         `-.             ,'
+            `-._     _,-'
+                77jj'
+               //_||
+            __//--'/`         
+          ,--'/`  ' -->

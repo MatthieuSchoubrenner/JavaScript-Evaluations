@@ -1,0 +1,27 @@
+/* -----BODY----- */
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+/* SUCESS / ERROR */
+.error {
+  color: red;
+}
+
+.success {
+  color: green;
+}
+
+/* BOUTON ESTIMER */
+#btn {
+  background-color: black;
+  color: white;
+  width: 200px;
+  height: 35px;
+  font-size: 1.4em;
+}
+
+/* CHAMP */
+label {
+  display: flex;
+}
