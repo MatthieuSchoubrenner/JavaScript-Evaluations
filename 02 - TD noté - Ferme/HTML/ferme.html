@@ -7,7 +7,6 @@
   <link rel="stylesheet" href="../CSS/ferme.css">
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
-  <script src="../JS/ferme.js"></script>
   <title>Exercice gestion ferme JS</title>
 
 </head>
@@ -25,8 +24,8 @@
     <br><br>
 
     <label>Couleur oeuf :</label><span class="erreur" id="erreurCouleur">Veuillez indiquez la couleur de l'œuf</span>
-    <select name="couleur" id="couleur" onblur="rouge()">
-      <option value="">couleur</option>
+    <select name="couleur" id="couleurOeuf" onblur="rouge()">
+      <option value=""></option>
       <option value="beige">beige</option>
       <option value="bleu">bleu</option>
       <option value="vert">vert</option>
@@ -37,43 +36,21 @@
 
     <label>Nombre d'oeuf par jour :</label><span class="erreur" id="erreurNBoeuf">Veuillez indiquez le nombre
       d'œufs/jour</span>
-    <input type="text" name="nb" id="nb" onblur="rouge()">
+    <input type="text" name="nb" id="nbOeuf" onblur="rouge()">
   </div>
   <br>
 
-  <button type="button" onclick="ajouter()">AJOUTER</button>
+  <button type="button" onclick="ajouter()">AJOUTER POULE</button>
   <button type="button" onclick="afficher()">AFFICHER</button>
   <br><br>
 
   <div id="tableau">
-    <table border="1px">
-      <thead>
-        <tr>
-          <td>Race</td>
-          <td>Nom</td>
-          <td>Couleur</td>
-          <td>Couleur oeuf</td>
-          <td>Nbr/jour</td>
-          <td>Nbr/semaine</td>
-          <td>Nbr/mois</td>
-          <td>Nbr/année</td>
-          <td>Total annuel</td>
-        </tr>
-      </thead>
-      <tbody></tbody>
-      <tfoot>
-        <tr>
-          <td colspan="7"></td>
-          <td>Total :</td>
-          <td id="tabTotal"></td>
-        </tr>
-      </tfoot>
-    </table>
+    <table border="1px" id="table"></table>
     <br>
     <span id="chiffreAffaireAnnuel" class="valid"></span>
   </div>
 
-
+  <script src="../JS/ferme.js"></script>
 </body>
 
 </html>
