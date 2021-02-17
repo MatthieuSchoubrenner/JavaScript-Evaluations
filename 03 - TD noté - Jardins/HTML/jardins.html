@@ -24,7 +24,8 @@
   </header>
   <div class="container">
     <div class="row"></div>
-    <div class="col-12"><img class="img-fluid" style="max-width: 200px;" src="../IMG/le-jardin-d-eugene-logo-1602188641.jpg"></div>
+    <div class="col-12"><img class="img-fluid" style="max-width: 200px;"
+        src="../IMG/le-jardin-d-eugene-logo-1602188641.jpg"></div>
   </div>
 
   <div class="container">
@@ -37,7 +38,7 @@
     </nav>
   </div>
 
-  <div class="conatainer">
+  <div class="container">
     <div class="row">
       <h1>SLIDER</h1>
     </div>
@@ -45,16 +46,115 @@
 
   <div class="container">
     <div class="row">
-      <div class="col-3"><img src="../IMG/pasteque-janosik.jpg" style="max-width: 200px;"><p>Pastèque Janosik</p></div>
-      <div class="col-3"><img src="../IMG/aneth-officinale-bio.jpg" style="max-width: 200px;"><p>Aneth officinale Bio</p></div>
-      <div class="col-3"><img src="../IMG/basilic-italien-classic-bio.jpg" style="max-width: 200px;"><p>Basilic Italien Classic Bio</p></div>
-      <div class="col-3"><img src="../IMG/carotte-berlicumer-bio.jpg" style="max-width: 200px;"><p>Carotte Berlicumer Bio</p></div>
-      <div class="col-3"><img src="../IMG/pasteque-sugar-baby.jpg" style="max-width: 200px;"><p>Pastèque Sugar Baby</p></div>
-      <div class="col-3"><img src="../IMG/basilic-rouge-dark-opal-bio.jpg" style="max-width: 200px;"><p>Basilic rouge dark opal Bio</p></div>
-      <div class="col-3"><img src="../IMG/betterave-cylindra-bio.jpg" style="max-width: 200px;"><p>Betterave Cylindra Bio</p></div>
-      <div class="col-3"><img src="../IMG/carotte-orange-flakkee-2-de-colmar-bio.jpg" style="max-width: 200px;"><p>Carotte orange flakkee de Colmar Bio</p></div>
+      <div class="col"></div>
+      <h2 class="col">Produits phares</h2>
+      <div class="col-6">
+        <div id="ligne"></div>
+      </div>
+      <div class="col-2"></div>
+    </div>
+    <div class="row">
+      <div class="col-3"><img src="../IMG/pasteque-janosik.jpg" style="max-width: 200px;">
+        <p>Pastèque Janosik</p>
+        <p>1,95€</p>
+      </div>
+      <div class="col-3"><img src="../IMG/aneth-officinale-bio.jpg" style="max-width: 200px;">
+        <p>Aneth officinale Bio</p>
+        <p>3,10€</p>
+      </div>
+      <div class="col-3"><img src="../IMG/basilic-italien-classic-bio.jpg" style="max-width: 200px;">
+        <p>Basilic Italien Classic Bio</p>
+        <p>1,60€</p>
+      </div>
+      <div class="col-3"><img src="../IMG/carotte-berlicumer-bio.jpg" style="max-width: 200px;">
+        <p>Carotte Berlicumer Bio</p>
+        <p>3,80€</p>
+      </div>
+      <div class="col-3"><img src="../IMG/pasteque-sugar-baby.jpg" style="max-width: 200px;">
+        <p>Pastèque Sugar Baby</p>
+      </div>
+      <div class="col-3"><img src="../IMG/basilic-rouge-dark-opal-bio.jpg" style="max-width: 200px;">
+        <p>Basilic rouge dark opal Bio</p>
+      </div>
+      <div class="col-3"><img src="../IMG/betterave-cylindra-bio.jpg" style="max-width: 200px;">
+        <p>Betterave Cylindra Bio</p>
+      </div>
+      <div class="col-3"><img src="../IMG/carotte-orange-flakkee-2-de-colmar-bio.jpg" style="max-width: 200px;">
+        <p>Carotte orange flakkee de Colmar Bio</p>
+      </div>
     </div>
   </div>
+  <footer class="container-fluid">
+    <div class="row">
+      <p class="col d-flex justify-content-center blanc">Acceuil /&nbsp;<span>Contactez-nous</span></p>
+    </div>
+    <div class="row">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col"></div>
+          <div class="col info">
+            <h4>Informations</h4>
+            <div class="flex">
+              <p>📍</p>
+              <p>
+                Le jardin d'Eugene <br>
+                8 rue du Luxembourg <br>
+                L-575² Frisange <br>
+                Luxemburg
+              </p>
+            </div>
+            <hr>
+            <div class="flex">
+              <p>📞</p>
+              <p>
+                Appelez-nous : <br>
+                +352 26 36 29 84
+              </p>
+            </div>
+            <hr>
+            <div class="flex">
+              <p>📧</p>
+              <p>
+                Envoyez-nous un e-mail : <br>
+                contact@lejardindeugene.com
+              </p>
+            </div>
+          </div>
+          <form class="col-6 border">
+            <h4>Contactez-nous</h4>
+            <div class="container-fluid">
+              <div class="row">
+                <label class="col d-flex justify-content-end">Sujet</label>
+                <select class="col-6"></select>
+                <div class="col"></div>
+              </div>
+              <div class="row">
+                <label class="col d-flex justify-content-end">Adresse e-mail</label>
+                <input class="col-6" placeholder="votre@email.com">
+                <div class="col"></div>
+              </div>
+              <div class="row">
+                <label class="col d-flex justify-content-end">Document joint</label>
+                <input class="col">
+                <div class="col d-flex justify-content-center"><input type="file" id="file"><label for="file">Choisir un
+                    fichier</label></div>
+                <div class="col">optionnel</div>
+              </div>
+              <div class="row">
+                <label class="col d-flex justify-content-end">Message</label>
+                <textarea class="col-9" placeholder="Comment pouvons-nous aider ?"></textarea>
+              </div>
+              <div class="row">
+                <div class="col-10"></div>
+                <button class="col">Envoyer</button>
+              </div>
+            </div>
+          </form>
+          <div class="col"></div>
+        </div>
+      </div>
+    </div>
+  </footer>
 
 
 
