@@ -1,3 +1,13 @@
+/* -----HEADER----- */
+.fixed {
+  position: fixed;
+  z-index: 2000;
+  background-color: lightgrey;
+  width: 100%;
+}
+
+/* -----FIN HEADER----- */
+
 /* -----SLIDER----- */
 #slidepictures {
   width: 100%;
@@ -28,6 +38,7 @@
   margin-bottom: 30px;
   padding: 0;
 }
+
 /* -----FIN SLIDER----- */
 
 
@@ -45,6 +56,7 @@ h2 {
   font-weight: bold;
   color: rgb(58, 58, 58);
 }
+
 /* -----FIN SOUS SLIDER----- */
 
 /* ARTICLE */
@@ -54,9 +66,8 @@ span {
   text-align: center;
   font-weight: bold;
 }
+
 /* FIN ARTICLE */
-
-
 
 
 /* -----FOOTER----- */
@@ -135,4 +146,16 @@ footer button:last-child {
   padding: 10px;
   background-color: #323232;
 }
+
 /* -----FIN FOOTER----- */
+
+/* -----BOUTON REMONTER TOP----- */
+#fleche {
+  font-size: 4em;
+  top: 75px;
+  right: 15px;
+  display: none;
+  position: fixed;
+}
+
+/* -----FIN BOUTON REMONTER TOP----- */

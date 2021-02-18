@@ -29,8 +29,8 @@
   </header>
   <div class="container">
     <div class="row"></div>
-    <div class="col-12"><img class="img-fluid" style="max-width: 200px;"
-        src="../IMG/le-jardin-d-eugene-logo-1602188641.jpg"></div>
+    <div class="col-12"><img id="logo" style="max-width: 200px;" src="../IMG/le-jardin-d-eugene-logo-1602188641.jpg">
+    </div>
   </div>
 
   <div class="container">
@@ -46,11 +46,11 @@
   <div class="container-fluid">
     <div id="defilement"></div>
     <div class="row">
-      <div class="single-item" id="slider">
+      <div class="slide" id="slider">
         <img src="../IMG/96ec78587c938c935459673fb6e9f2694d0b1554_2021-02-Semis.jpg" alt="Photos plante"
           class="img-fluid rounded mx-auto" id="slidepictures">
-        <img src="../IMG/graines fleurs.png" alt="photo-graines-fleurs" class="img-fluid rounded mx-auto"
-          id="slidepictures">
+        <img src="../IMG/96ec78587c938c935459673fb6e9f2694d0b1554_2021-02-Semis.jpg" alt="photo-graines-fleurs"
+          class="img-fluid rounded mx-auto" id="slidepictures">
       </div>
     </div>
   </div>
@@ -170,16 +170,14 @@
       </div>
     </div>
   </footer>
-  <p id="fleche" onclick="remonter()">⇧</p>
+  <p id="fleche" onclick="remonter()">⬆</p>
 
 
   <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
-  <script type="text/javascript" src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
-  <script type="text/javascript" src="plug-in/slick-1.8.1/slick/slick.min.js"></script>
 
   <script>
     $(document).ready(function () {
-      $('.single-item').slick({
+      $('.slide').slick({
         dots: true
       });
     });
@@ -202,26 +200,23 @@
       var top = $(window).scrollTop();
 
       if (sticky > 200) {
-        $('#header').addClass('fixed');
+        $('header').addClass('fixed');
         $('#logo').hide();
-        $('tampon').show();
+        $('defilement').show();
       } else {
-        $('#header').removeClass('fixed');
+        $('header').removeClass('fixed');
         $('#logo').show();
-        $('tampon').hide();
+        $('defilement').hide();
       }
 
-      if (top > 300) {
-        $('#return').show();
+      if (top > 1000) {
+        $('#fleche').show();
       } else {
-        $('#return').hide();
+        $('#fleche').hide();
       }
     });
 
-
-
-
-    function haut() {
+    function remonter() {
       $('body').animate({
           scrollTop: '0px'
         },
