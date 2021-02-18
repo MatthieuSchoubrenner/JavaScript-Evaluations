@@ -1,8 +1,33 @@
 /* -----SLIDER----- */
-h1 {
-  text-align: center;
+#slidepictures {
+  width: 100%;
 }
 
+.slick-prev:before,
+.slick-next:before {
+  color: rgb(0, 0, 0) !important;
+  font-size: 30px !important;
+}
+
+.slick-prev {
+  left: 10px !important;
+  top: 70% !important;
+}
+
+.slick-prev,
+.slick-next {
+  z-index: 1;
+}
+
+.slick-next {
+  right: 25px !important;
+  top: 70% !important;
+}
+
+.slick-dotted.slick-slider {
+  margin-bottom: 30px;
+  padding: 0;
+}
 /* -----FIN SLIDER----- */
 
 
@@ -20,7 +45,6 @@ h2 {
   font-weight: bold;
   color: rgb(58, 58, 58);
 }
-
 /* -----FIN SOUS SLIDER----- */
 
 /* ARTICLE */
@@ -30,7 +54,6 @@ span {
   text-align: center;
   font-weight: bold;
 }
-
 /* FIN ARTICLE */
 
 
@@ -112,5 +135,4 @@ footer button:last-child {
   padding: 10px;
   background-color: #323232;
 }
-
 /* -----FIN FOOTER----- */
