@@ -1,7 +1,44 @@
-#ligne {
-  background-color: hsl(0deg 0% 94%);
-  margin: 20px 0;
+/* -----SLIDER----- */
+h1 {
+  text-align: center;
+}
+
+/* -----FIN SLIDER----- */
+
+
+/* -----SOUS SLIDER----- */
+#separation {
+  background-color: rgb(170, 168, 168);
+  opacity: 20%;
+  margin: 10px;
   height: 10px;
+  width: 700px;
+}
+
+h2 {
+  margin-left: -440px;
+  font-weight: bold;
+  color: rgb(58, 58, 58);
+}
+
+/* -----FIN SOUS SLIDER----- */
+
+/* ARTICLE */
+.row,
+.col-3,
+span {
+  text-align: center;
+  font-weight: bold;
+}
+
+/* FIN ARTICLE */
+
+
+
+
+/* -----FOOTER----- */
+span {
+  color: #65AB2F;
 }
 
 
@@ -75,3 +112,5 @@ footer button:last-child {
   padding: 10px;
   background-color: #323232;
 }
+
+/* -----FIN FOOTER----- */
