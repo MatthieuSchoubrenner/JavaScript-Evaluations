@@ -38,10 +38,9 @@
     </nav>
   </div>
 
-  <div class="container">
-    <div class="row">
-      <h1>SLIDER</h1>
-    </div>
+  <div class="slider">
+    <img class="img-fluid" src="../IMG/96ec78587c938c935459673fb6e9f2694d0b1554_2021-02-Semis.jpg" alt="acceuil1">
+    <!-- <img src="../IMG/sac légumes.jpeg" alt="sac de légumes"> -->
   </div>
 
   <div class="container">
@@ -54,32 +53,33 @@
       <div class="col-2"></div>
     </div>
     <div class="row">
-      <div class="col-3"><img src="../IMG/pasteque-janosik.jpg" style="max-width: 200px;">
+      <div class="col-3"><img class="img-fluid" src="../IMG/pasteque-janosik.jpg" style="max-width: 200px;">
         <p>Pastèque Janosik</p>
         <span>1,95€</span>
       </div>
-      <div class="col-3"><img src="../IMG/aneth-officinale-bio.jpg" style="max-width: 200px;">
+      <div class="col-3"><img class="img-fluid" src="../IMG/aneth-officinale-bio.jpg" style="max-width: 200px;">
         <p>Aneth officinale Bio</p>
         <span>3,10€</span>
       </div>
-      <div class="col-3"><img src="../IMG/basilic-italien-classic-bio.jpg" style="max-width: 200px;">
+      <div class="col-3"><img class="img-fluid" src="../IMG/basilic-italien-classic-bio.jpg" style="max-width: 200px;">
         <p>Basilic Italien Classic Bio</p>
         <span>1,60€</span>
       </div>
-      <div class="col-3"><img src="../IMG/carotte-berlicumer-bio.jpg" style="max-width: 200px;">
+      <div class="col-3"><img class="img-fluid" src="../IMG/carotte-berlicumer-bio.jpg" style="max-width: 200px;">
         <p>Carotte Berlicumer Bio</p>
         <span>3,80€</span>
       </div>
-      <div class="col-3"><img src="../IMG/pasteque-sugar-baby.jpg" style="max-width: 200px;">
+      <div class="col-3"><img class="img-fluid" src="../IMG/pasteque-sugar-baby.jpg" style="max-width: 200px;">
         <p>Pastèque Sugar Baby</p>
       </div>
-      <div class="col-3"><img src="../IMG/basilic-rouge-dark-opal-bio.jpg" style="max-width: 200px;">
+      <div class="col-3"><img class="img-fluid" src="../IMG/basilic-rouge-dark-opal-bio.jpg" style="max-width: 200px;">
         <p>Basilic rouge dark opal Bio</p>
       </div>
-      <div class="col-3"><img src="../IMG/betterave-cylindra-bio.jpg" style="max-width: 200px;">
+      <div class="col-3"><img class="img-fluid" src="../IMG/betterave-cylindra-bio.jpg" style="max-width: 200px;">
         <p>Betterave Cylindra Bio</p>
       </div>
-      <div class="col-3"><img src="../IMG/carotte-orange-flakkee-2-de-colmar-bio.jpg" style="max-width: 200px;">
+      <div class="col-3"><img class="img-fluid" src="../IMG/carotte-orange-flakkee-2-de-colmar-bio.jpg"
+          style="max-width: 200px;">
         <p>Carotte orange flakkee de Colmar Bio</p>
       </div>
     </div>
@@ -130,7 +130,7 @@
               </div>
               <div class="row">
                 <label class="col d-flex justify-content-end">Adresse e-mail</label>
-                <input class="col-6" placeholder="votre@email.com">
+                <input class="col-6">
                 <div class="col"></div>
               </div>
               <div class="row">
@@ -155,9 +155,34 @@
       </div>
     </div>
   </footer>
-  <p id="fleche" onclick="remonter()">⇧</p>
+  <p id="fleche">⇧</p>
   <!-- SCRIPT JS -->
-  <script type="text/javascript"></script>
+  <script type="text/javascript">
+    // -----SLIDER-----
+    $(document).ready(function () {
+      $('.slider').slick({
+        dots: true,
+        infinite: true,
+        speed: 500,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+      });
+    });
+
+
+
+
+
+
+    let tab = ["Service client", "Service technique", "Service web", "Service SAV"];
+    let texte = "";
+    for (i of tab) {
+      texte += "<option>" + i + "</option>"
+    }
+    $("select").html(texte);
+  </script>
+
+
 
 
 
