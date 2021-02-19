@@ -27,12 +27,17 @@
       </div>
     </div>
   </header>
-  <div class="container">
+  <!-- FIN HEADER -->
+
+  <!-- LOGO -->
+  <div class="container-fluid">
     <div class="row"></div>
     <div class="col-12"><img id="logo" style="max-width: 200px;" src="../IMG/le-jardin-d-eugene-logo-1602188641.jpg">
     </div>
   </div>
+  <!-- FIN LOGO -->
 
+  <!-- MENU -->
   <div class="container">
     <nav class="row">
       <div class="col"></div>
@@ -42,19 +47,23 @@
       <div class="col"></div>
     </nav>
   </div>
+  <!-- FIN MENU -->
 
+  <!-- SLIDER PHOTOS -->
   <div class="container-fluid">
     <div id="defilement"></div>
     <div class="row">
       <div class="slide" id="slider">
         <img src="../IMG/96ec78587c938c935459673fb6e9f2694d0b1554_2021-02-Semis.jpg" alt="Photos plante"
           class="img-fluid rounded mx-auto" id="slidepictures">
-        <img src="../IMG/96ec78587c938c935459673fb6e9f2694d0b1554_2021-02-Semis.jpg" alt="photo-graines-fleurs"
-          class="img-fluid rounded mx-auto" id="slidepictures">
+        <img src="../IMG/graines fleurs.png" alt="photo-graines-fleurs" class="img-fluid rounded mx-auto"
+          id="slidepictures">
       </div>
     </div>
   </div>
+  <!-- FIN SLIDER PHOTOS -->
 
+  <!-- ARTICLES -->
   <div class="container">
     <div class="row">
       <div class="col"></div>
@@ -96,17 +105,20 @@
       </div>
     </div>
   </div>
+  <!-- FIN ARTICLES -->
+
+  <!-- FOOTER -->
   <footer class="container-fluid">
     <div class="row">
       <p class="col d-flex justify-content-center blanc">Acceuil /&nbsp;<span>Contactez-nous</span></p>
     </div>
-    <div class="row">
-      <div class="container-fluid">
-        <div class="row">
-          <div class="col"></div>
-          <div class="col info">
-            <h4>Informations</h4>
-            <div class="flex">
+    <div class="container">
+      <div class="row mt-5 mb-5">
+        <div class="col-lg-3">
+          <h3>Informations</h3>
+          <div id="adresse">
+            <i class="fas fa-map-marker-alt fas-heigth"></i>
+            <div>
               <p>📍</p>
               <p>
                 Le jardin d'Eugene <br>
@@ -115,16 +127,20 @@
                 Luxemburg
               </p>
             </div>
-            <hr>
-            <div class="flex">
+          </div>
+          <div id="telephone">
+            <i class="fas fa-phone-alt"></i>
+            <div>
               <p>📞</p>
               <p>
-                Appelez-nous : <br>
+                Appelez-nous: <br>
                 +352 26 36 29 84
               </p>
             </div>
-            <hr>
-            <div class="flex">
+          </div>
+          <div id="email">
+            <i class="fas fa-envelope"></i>
+            <div>
               <p>📧</p>
               <p>
                 Envoyez-nous un e-mail : <br>
@@ -132,48 +148,79 @@
               </p>
             </div>
           </div>
-          <form class="col-6 border">
-            <h4>Contactez-nous</h4>
-            <div class="container-fluid">
-              <div class="row">
-                <label class="col d-flex justify-content-end">Sujet</label>
-                <div class="col-lg-9">
-                  <select id="sujet" name="sujet" class="form-select" onblur="sujetSelect()">
+        </div>
+        <div class="col-lg-9">
+          <div id="contact">
+            <div class="row">
+              <h3 class="col-lg-12">Contactez-nous</h3>
+            </div>
+            <!-- FORMULAIRE RENSEIGNEMENTS -->
+            <div class="row formStyle">
+              <div class="col-lg-3 text-end">
+                <label for="sujet">Sujet</label>
+              </div>
+              <div class="col-lg-5">
+                <select id="sujet" name="sujet" class="form-select" onblur="textSujet()">
 
-                  </select>
-                </div>
+                </select>
               </div>
-              <div class="row">
-                <label class="col d-flex justify-content-end">Adresse e-mail</label>
-                <input class="col-6">
-                <div class="col"></div>
-              </div>
-              <div class="row">
-                <label class="col d-flex justify-content-end">Document joint</label>
-                <input class="col">
-                <div class="col d-flex justify-content-center"><input type="file" id="file"><label for="file">Choisir un
-                    fichier</label></div>
-                <div class="col">(optionnel)</div>
-              </div>
-              <div class="row">
-                <label class="col d-flex justify-content-end">Message</label>
-                <textarea class="col-9" placeholder="Comment pouvons-nous aider ?"></textarea>
-              </div>
-              <div class="row">
-                <div class="col-10"></div>
-                <button class="col">Envoyer</button>
+              <div class="col-lg-4" id="errorSujet">
+                * champ obligatoire
               </div>
             </div>
-          </form>
-          <div class="col"></div>
+            <div class="row formStyle">
+              <div class="col-lg-3 text-end">
+                <label for="mail">Adresse e-mail</label>
+              </div>
+              <div class="col-lg-5">
+                <input id="mail" type="text" placeholder="votre@email.com" class="form-control" onblur="verifMail()">
+              </div>
+              <div class="col-lg-4" id="errorMail">
+                * champ obligatoire
+              </div>
+            </div>
+            <div class="row formStyle">
+              <div class="col-lg-3 text-end">
+                <label for="doc">Document joint</label>
+              </div>
+              <div class="col-lg-5">
+                <div class="col d-flex justify-content-center"><input type="file" id="file"><label for="file">Choisir un
+                    fichier</label></div>
+              </div>
+              <div class="col-lg-4">
+                * optionnel
+              </div>
+            </div>
+            <div class="row formStyle">
+              <div class="col-lg-3 text-end">
+                <label for="area">Message</label>
+              </div>
+              <div class="col-lg-5">
+                <textarea class="form-control" name="area" id="area" rows="3" placeholder="Comment pouvons-nous aider ?"
+                  onblur="verifMessage()"></textarea>
+              </div>
+              <div class="col-lg-4" id="errorMessage">
+                * champ obligatoire
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-lg-12 text-end">
+                <button type="button" class="btn btn-dark btn-lg">Envoyer</button>
+              </div>
+            </div>
+          </div>
+          <!-- FIN FORMULAIRE RENSEIGNEMENTS -->
         </div>
       </div>
     </div>
   </footer>
-  <p id="fleche" onclick="remonter()">⬆</p>
+  <!-- FIN FOOTER -->
+  <a id="fleche" href="#" onclick="remonter()">⬆</a>
 
 
   <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+  <script type="text/javascript" src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+  <script src="../slick-1.8.1/slick/slick.min.js"></script>
 
   <script>
     $(document).ready(function () {
@@ -193,6 +240,42 @@
       }
 
       $('#sujet').html(text);
+    }
+
+    function verifSujet() {
+      var sujet = $('#sujet').val();
+
+      if (sujet == '') {
+        $('#errorSujet').show();
+        $('#errorSujet').addClass('error');
+      } else {
+        $('#errorSujet').hide();
+      }
+    }
+
+
+    function verifMail() {
+      var mail = $('#mail').val();
+      var regex = new RegExp("^[\\w.-]+@[A-Za-z0-9.-]+.[a-z]{2,4}$");
+
+      if ((mail == '') || (!regex.test(mail))) {
+        $('#errorMail').show();
+        $('#errorMail').addClass('error');
+      } else {
+        $('#errorMail').hide();
+      }
+    }
+
+
+    function verifMessage() {
+      var message = $('#area').val();
+
+      if (message == '') {
+        $('#errorMessage').show();
+        $('#errorMessage').addClass('error');
+      } else {
+        $('#errorMessage').hide();
+      }
     }
 
     $(window).scroll(function () {
@@ -223,6 +306,14 @@
         1500);
       return false;
     }
+
+    $(document).ready(function(){
+            $('.slide').slick(
+                {   
+                    dots:true
+                }
+            );
+        });
   </script>
 
 
