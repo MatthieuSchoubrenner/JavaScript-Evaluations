@@ -160,7 +160,7 @@
                 <label for="sujet">Sujet</label>
               </div>
               <div class="col-lg-5">
-                <select id="sujet" name="sujet" class="form-select" onblur="textSujet()">
+                <select id="sujet" name="sujet" class="form-select" onblur="checkSujet()">
 
                 </select>
               </div>
@@ -173,7 +173,7 @@
                 <label for="mail">Adresse e-mail</label>
               </div>
               <div class="col-lg-5">
-                <input id="mail" type="text" placeholder="votre@email.com" class="form-control" onblur="verifMail()">
+                <input id="mail" type="text" placeholder="votre@email.com" class="form-control" onblur="checkMail()">
               </div>
               <div class="col-lg-4" id="errorMail">
                 * champ obligatoire
@@ -197,7 +197,7 @@
               </div>
               <div class="col-lg-5">
                 <textarea class="form-control" name="area" id="area" rows="3" placeholder="Comment pouvons-nous aider ?"
-                  onblur="verifMessage()"></textarea>
+                  onblur="checkMessage()"></textarea>
               </div>
               <div class="col-lg-4" id="errorMessage">
                 * champ obligatoire
@@ -229,9 +229,9 @@
       });
     });
 
-    textSujet()
+    categories()
 
-    function textSujet() {
+    function categories() {
       var text = '';
       var tab = ['', 'Service client', 'Service technique', 'Service web', 'Service SAV'];
 
@@ -242,7 +242,7 @@
       $('#sujet').html(text);
     }
 
-    function verifSujet() {
+    function checkSujet() {
       var sujet = $('#sujet').val();
 
       if (sujet == '') {
@@ -254,7 +254,7 @@
     }
 
 
-    function verifMail() {
+    function checkMail() {
       var mail = $('#mail').val();
       var regex = new RegExp("^[\\w.-]+@[A-Za-z0-9.-]+.[a-z]{2,4}$");
 
@@ -267,7 +267,7 @@
     }
 
 
-    function verifMessage() {
+    function checkMessage() {
       var message = $('#area').val();
 
       if (message == '') {
@@ -307,13 +307,11 @@
       return false;
     }
 
-    $(document).ready(function(){
-            $('.slide').slick(
-                {   
-                    dots:true
-                }
-            );
-        });
+    $(document).ready(function () {
+      $('.slide').slick({
+        dots: true
+      });
+    });
   </script>
 
 
