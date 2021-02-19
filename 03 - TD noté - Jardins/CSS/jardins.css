@@ -17,6 +17,21 @@ span {
   width: 100%;
 }
 
+.slick-prev {
+  left: 25px !important;
+  top: 100px !important;
+}
+
+.slick-prev,
+.slick-next {
+  z-index: 1;
+}
+
+.slick-next {
+  right: 25px !important;
+  top: 100px !important;
+}
+
 /* -----FIN SLIDER----- */
 
 
